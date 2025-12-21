@@ -90,7 +90,7 @@ export const ExpandableSkillTags = ({
       {skills.length > initialCount && (
         <Button
           variant="link"
-          className="mt-3 px-0 text-sm text-neutral-900"
+          className="mt-3 px-0 text-sm text-gray-500"
           onClick={toggleExpansion}
           aria-expanded={isExpanded}
         >

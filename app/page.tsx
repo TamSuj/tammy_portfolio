@@ -12,16 +12,17 @@ export default function Home() {
       <main className="w-full max-w-5xl h-screen flex flex-col justify-center items-center">
         {/* Hero heading */}
         <section className="space-y-6 text-center">
-          <div className="text-[4.5rem] sm:text-[5.5rem] leading-[1.05] font-semibold tracking-tight text-neutral-900">
+          <div className="text-[3.5rem] sm:text-[5.5rem] leading-[1.05] font-semibold tracking-tight text-neutral-900">
             <div className="flex flex-wrap items-center justify-center gap-4">
-              <span>Hi! I'm Tammy</span>
+              <span className="text-neutral-500">Hi!</span>
+              <span>I'm Tammy</span>
             </div>
 
             <div className="flex flex-wrap items-center justify-center gap-4">
               <span>Backend</span>
               <span className="inline-flex items-center justify-center h-[70px] w-[100px] rounded-[999px] overflow-hidden bg-[#ff5a1f]">
                 <Image
-                  src="https://images.unsplash.com/photo-1760670399462-f5e479452c27?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   alt="Backend project"
                   width={100}
                   height={70}
@@ -80,10 +81,10 @@ export default function Home() {
       </main>
 
       {/* Experience Section */}
-      <h1 className="text-neutral-900 text-center text-4xl font-bold tracking-tight sm:text-5xl pt-16">
+      <h1 className="text-neutral-900 text-center text-4xl font-bold tracking-tight sm:text-5xl py-16">
         Experience
       </h1>
-      <section className="w-full max-w-5xl py-16">
+      <section className="w-full max-w-5xl">
         <Timeline />
       </section>
 
@@ -91,7 +92,7 @@ export default function Home() {
       <h1 className="text-neutral-900 text-center text-4xl font-bold tracking-tight sm:text-5xl py-16">
         Skills
       </h1>
-      <section className="w-full max-w-7xl pb-16 px-4">
+      <section className="w-full max-w-7xl px-4 pb-12">
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12">
           {/* Left Column - BubbleBadges (narrower) */}
           <div className="lg:col-span-2">
@@ -162,16 +163,16 @@ export default function Home() {
       </section>
 
       {/* Projects Section */}
-      <h1 className="text-neutral-900 text-center text-4xl font-bold tracking-tight sm:text-5xl">
+      <h1 className="text-neutral-900 text-center text-4xl font-bold tracking-tight sm:text-5xl pt-16">
         Projects
       </h1>
-      <section className="w-full max-w-5xl py-16">
+      <section className="w-full max-w-5xl pb-12">
         <AnimatedCardStack />
       </section>
 
       {/* Contact Section */}
-      <section className="w-full max-w-5xl py-16">
-        <h1 className="text-neutral-900 text-center text-4xl font-bold tracking-tight sm:text-5xl mb-12">
+      <section className="w-full max-w-5xl">
+        <h1 className="text-neutral-900 text-center text-4xl font-bold tracking-tight py-16 sm:text-5xl">
           Contact
         </h1>
         <SocialsContact />
