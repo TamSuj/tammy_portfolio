@@ -165,7 +165,7 @@ export default function AnimatedCardStack() {
       <div className="relative z-10 -mt-px flex w-full items-center justify-center border-t border-neutral-200 py-4">
         <button
           onClick={handleAnimate}
-          className="flex h-9 cursor-pointer select-none items-center justify-center gap-1 overflow-hidden rounded-lg border border-neutral-200 bg-white px-3 font-medium text-neutral-700 transition-all hover:bg-neutral-50 active:scale-[0.98]"
+          className="flex h-9 cursor-pointer select-none items-center justify-center gap-1 overflow-hidden rounded-lg border border-neutral-200 bg-black px-3 font-medium text-white transition-all hover:bg-neutral-600 active:bg-neutral-700 active:scale-[0.98]"
         >
           Next Project
         </button>

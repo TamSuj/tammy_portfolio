@@ -18,7 +18,7 @@ const timelineData: Timeline[] = [
   {
     date: "2025",
     title: "Software Engineer Intern @ LinkedIn",
-    content: "LinkedIn Ads - Shipped new ads incentives type, cut fraud 💸LinkedIn Ads - Shipped new ads incentives type, cut fraud 💸"
+    content: "LinkedIn Ads - Shipped new ads incentives type, cut fraud 💸"
   },
   {
     date: "2024",
