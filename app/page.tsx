@@ -1,6 +1,7 @@
   "use client";
 
   import { useRef } from "react";
+  import { motion } from "framer-motion";
   import Image from "next/image";
   import { BubbleBadges } from "@/components/ui/bubble-badges";
   import AnimatedCardStack from "@/components/ui/animate-card-animation";
@@ -121,7 +122,7 @@
           {/* CTA button */}
           <div className="mt-10 relative z-10">
             <a
-              href="https://drive.google.com/file/d/1-PZFZPKrTwmU9tnuwDUZCo0qDDH1i6ii/view?usp=sharing"
+              href="https://drive.google.com/file/d/1pXc1_LPl1ZNeo0VjjmtYj7NG5cWX_7l4/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 rounded-full bg-neutral-900 text-white px-10 py-4 text-base font-medium shadow-[0_18px_40px_rgba(0,0,0,0.3)] hover:bg-black transition"
@@ -160,70 +161,99 @@
         </h1>
         <section className="w-full max-w-7xl px-4 pb-12 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12">
-            {/* Left Column - BubbleBadges (narrower) */}
-            <div className="lg:col-span-2">
-            <h3 className="mb-4 text-lg font-semibold text-neutral-900 text-center">Area of Expertise</h3>
+            {/* Left Column - BubbleBadges (narrower) with scroll animation */}
+            <motion.div
+              className="lg:col-span-2"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+            >
+              <h3 className="mb-4 text-lg font-semibold text-neutral-900 text-center">
+                Area of Expertise
+              </h3>
               <BubbleBadges />
-            </div>
+            </motion.div>
             
-            {/* Right Column - Skill tag */}
-            <div className="lg:col-span-3">
-              <ExpandableSkillTags
-                title="Programming Languages"
-                skills={[
-                  "Java",
-                  "Python",
-                  "C++",
-                  "JavaScript",
-                  "Go",
-                  "Scala",
-                  "SQL",
-                  "TypeScript",
-                  "ASP.Net",
-                  "HTML/CSS",
-                  "YAML",
-                  "Shell",
-                ]}
-                initialCount={10}
-              />
-              <ExpandableSkillTags
-                title="Frameworks/Libraries"
-                skills={[
-                  "React",
-                  "Node.js",
-                  "Hadoop",
-                  "GraphQL",
-                  "Apache Kafka",
-                  "Apache Flink",
-                  "REST APIs",
-                  "Tailwind",
-                  "Scikit-learn",
-                  "Sphinx",
-                  "Agile",
-                  "PyTorch",
-                  "Playwright",
-                  "PyTest",
-                  "pandas",
-                  "NumPy",
-                  "Matplotlib",
-                  "Seaborn",
-                  "Biopython",
-                ]}
-                initialCount={10}
-              />
-              <ExpandableSkillTags
-                title="Developer Tools"
-                skills={[
-                  "Git",
-                  "AWS",
-                  "Azure",
-                  "mySQL",
-                  "DBeaver",
-                  "Postman",
-                  "CI/CD",
-                ]}
-                initialCount={10}
-              />
+            {/* Right Column - Skill tags with staggered scroll animation */}
+            <div className="lg:col-span-3 space-y-6">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.5, delay: 0.15 }}
+              >
+                <ExpandableSkillTags
+                  title="Programming Languages"
+                  skills={[
+                    "Java",
+                    "Python",
+                    "C++",
+                    "JavaScript",
+                    "Go",
+                    "Scala",
+                    "SQL",
+                    "TypeScript",
+                    "ASP.Net",
+                    "HTML/CSS",
+                    "YAML",
+                    "Shell",
+                  ]}
+                  initialCount={10}
+                />
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.5, delay: 0.25 }}
+              >
+                <ExpandableSkillTags
+                  title="Frameworks/Libraries"
+                  skills={[
+                    "React",
+                    "Node.js",
+                    "Hadoop",
+                    "GraphQL",
+                    "Apache Kafka",
+                    "Apache Flink",
+                    "REST APIs",
+                    "Tailwind",
+                    "Scikit-learn",
+                    "Sphinx",
+                    "Agile",
+                    "PyTorch",
+                    "Playwright",
+                    "PyTest",
+                    "pandas",
+                    "NumPy",
+                    "Matplotlib",
+                    "Seaborn",
+                    "Biopython",
+                  ]}
+                  initialCount={10}
+                />
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.5, delay: 0.35 }}
+              >
+                <ExpandableSkillTags
+                  title="Developer Tools"
+                  skills={[
+                    "Git",
+                    "AWS",
+                    "Azure",
+                    "mySQL",
+                    "DBeaver",
+                    "Postman",
+                    "CI/CD",
+                  ]}
+                  initialCount={10}
+                />
+              </motion.div>
             </div>
           </div>
         </section>
