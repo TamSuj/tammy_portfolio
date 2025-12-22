@@ -15,6 +15,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Tammy Sujaritchai",
   description: "",
+  verification: {
+    google: "1gMwOZ9h_tFKrzipZRYBGlLBc7uG6A-dqcEVMNqD0tw",
+  },
 };
 
 export default function RootLayout({
