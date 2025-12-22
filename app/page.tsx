@@ -78,8 +78,22 @@
           </p>
 
           {/* Hero heading */}
-          <section className="space-y-6 text-center relative z-10">
-            <div className="text-[3.5rem] sm:text-[5.5rem] leading-[1.05] font-semibold tracking-tight text-neutral-900">
+          <motion.section
+            className="space-y-6 text-center relative z-10"
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.6,
+              ease: "easeOut",
+              staggerChildren: 0.12,
+            }}
+          >
+            <motion.div
+              className="text-[3.5rem] sm:text-[5.5rem] leading-[1.05] font-semibold tracking-tight text-neutral-900"
+              initial={{ opacity: 0, y: 18 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+            >
               <div className="flex flex-wrap items-center justify-center gap-4">
                 <span className="text-neutral-500">Hi!</span>
                 <span>I'm Tammy</span>
@@ -112,12 +126,17 @@
                   />
                 </span>
               </div>
-            </div>
+            </motion.div>
 
-            <p className="max-w-2xl text-lg text-neutral-500 mt-4 mx-auto">
+            <motion.p
+              className="max-w-2xl text-lg text-neutral-500 mt-4 mx-auto"
+              initial={{ opacity: 0, y: 18 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, ease: "easeOut", delay: 0.15 }}
+            >
               I build software that solves real-world problems and scales
-            </p>
-          </section>
+            </motion.p>
+          </motion.section>
 
           {/* CTA button */}
           <div className="mt-10 relative z-10">
