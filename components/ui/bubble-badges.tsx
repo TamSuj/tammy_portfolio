@@ -38,7 +38,7 @@ const badges: Badge[] = [
   {
     id: "payments",
     label: "payments",
-    color: "from-emerald-400 to-cyan-400",
+    color: "from-gray-100 to-gray-200",
     size: "lg",
     rotation: -2,
     zIndex: 3,
