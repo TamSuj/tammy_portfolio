@@ -1,6 +1,6 @@
   "use client";
 
-  import { useRef, useState, useEffect } from "react";
+  import { useRef } from "react";
   import Image from "next/image";
   import { BubbleBadges } from "@/components/ui/bubble-badges";
   import AnimatedCardStack from "@/components/ui/animate-card-animation";
@@ -28,20 +28,6 @@
 
   export default function Home() {
     const pageRef = useRef<HTMLDivElement>(null);
-    const [showOpportunitiesBubble, setShowOpportunitiesBubble] = useState(true);
-
-    useEffect(() => {
-      const handleScroll = () => {
-        // Only show when scroll position is at the top (within first viewport)
-        const scrollY = window.scrollY || window.pageYOffset;
-        setShowOpportunitiesBubble(scrollY < window.innerHeight);
-      };
-
-      window.addEventListener("scroll", handleScroll, { passive: true });
-      handleScroll(); // Check initial state
-
-      return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
 
     const trailImages = [
       "https://images.unsplash.com/photo-1626060490950-fabf0d72ca8a?q=80&w=2204&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -56,7 +42,6 @@
       beach,
       li,
       camera,
-      tammyli,
       sky,
     ];
 
@@ -82,13 +67,14 @@
             })}
           </ImageTrail>
         </div>
-         <p className="hidden lg:inline-flex items-center justify-center mx-auto px-6 py-2 text-base rounded-full border border-neutral-300 bg-white shadow-sm mt-10 relative z-10">
-              <span className="bg-gradient-to-r from-sky-500 via-blue-500 to-pink-500 bg-clip-text text-transparent">
-                Hover around to see magic! ✨
-              </span>
-        </p>
         {/* Hero Section - Full Viewport Height */}
         <main className="w-full max-w-5xl h-screen flex flex-col justify-center items-center relative z-10">
+          {/* Hover pill - top of landing page, does not affect centering */}
+          <p className="hidden lg:inline-flex items-center justify-center px-6 py-2 text-base rounded-full border border-neutral-300 bg-white shadow-sm absolute top-6 left-1/2 -translate-x-1/2">
+            <span className="bg-gradient-to-r from-sky-500 via-blue-500 to-pink-500 bg-clip-text text-transparent">
+              Hover around to see magic! ✨
+            </span>
+          </p>
 
           {/* Hero heading */}
           <section className="space-y-6 text-center relative z-10">
