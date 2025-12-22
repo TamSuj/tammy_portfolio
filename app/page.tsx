@@ -82,7 +82,11 @@
             })}
           </ImageTrail>
         </div>
-        
+         <p className="hidden lg:inline-flex items-center justify-center mx-auto px-6 py-2 text-base rounded-full border border-neutral-300 bg-white shadow-sm mt-10 relative z-10">
+              <span className="bg-gradient-to-r from-sky-500 via-blue-500 to-pink-500 bg-clip-text text-transparent">
+                Hover around to see magic! ✨
+              </span>
+        </p>
         {/* Hero Section - Full Viewport Height */}
         <main className="w-full max-w-5xl h-screen flex flex-col justify-center items-center relative z-10">
 
@@ -262,12 +266,12 @@
                 alt: "Bangkok",
               },
               {
-                src: escalator,
-                alt: "Escalator",
-              },
-              {
                 src: DC,
                 alt: "DC",
+              },
+              {
+                src: escalator,
+                alt: "Escalator",
               },
               {
                 src: sunset,
