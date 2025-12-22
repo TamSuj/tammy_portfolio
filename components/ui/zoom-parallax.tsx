@@ -1,6 +1,6 @@
 'use client';
 
-import { useScroll, useTransform, motion } from 'framer-motion';
+import { useScroll, useTransform, motion, useSpring } from 'framer-motion';
 import { useRef } from 'react';
 import { StaticImageData } from 'next/image';
 
@@ -21,11 +21,18 @@ export function ZoomParallax({ images }: ZoomParallaxProps) {
 		offset: ['start start', 'end end'],
 	});
 
-	const scale4 = useTransform(scrollYProgress, [0, 1], [1, 4]);
-	const scale5 = useTransform(scrollYProgress, [0, 1], [1, 5]);
-	const scale6 = useTransform(scrollYProgress, [0, 1], [1, 6]);
-	const scale8 = useTransform(scrollYProgress, [0, 1], [1, 8]);
-	const scale9 = useTransform(scrollYProgress, [0, 1], [1, 9]);
+	// Smooth the scroll progress with a spring so zoom feels less jittery
+	const smoothProgress = useSpring(scrollYProgress, {
+		stiffness: 80,
+		damping: 20,
+		mass: 0.6,
+	});
+
+	const scale4 = useTransform(smoothProgress, [0, 1], [1, 4]);
+	const scale5 = useTransform(smoothProgress, [0, 1], [1, 5]);
+	const scale6 = useTransform(smoothProgress, [0, 1], [1, 6]);
+	const scale8 = useTransform(smoothProgress, [0, 1], [1, 8]);
+	const scale9 = useTransform(smoothProgress, [0, 1], [1, 9]);
 
 	const scales = [scale4, scale5, scale6, scale5, scale6, scale8, scale9];
 
