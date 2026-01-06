@@ -268,7 +268,6 @@
                     "mySQL",
                     "DBeaver",
                     "Postman",
-                    "CI/CD",
                   ]}
                   initialCount={10}
                 />
