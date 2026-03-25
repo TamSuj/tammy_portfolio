@@ -34,7 +34,7 @@ const socialLinks: SocialLink[] = [
     ),
   },
   {
-    href: "mailto:gtsujaritchai@g.ucla.edu",
+    href: "mailto:tammysujaritchai@gmail.com",
     ariaLabel: "Email",
     dataSocial: "email",
     tooltip: "Email",
