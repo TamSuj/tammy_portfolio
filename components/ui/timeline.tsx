@@ -18,6 +18,12 @@ type Timeline = {
 
 const timelineData: Timeline[] = [
   {
+    company: "LinkedIn | Current",
+    title: "Software Engineer",
+    content: "Creating economic opportunity for every member of the global workforce 🛠️",
+    logo: linkedinLogo
+  },
+  {
     company: "Uber",
     title: "Software Engineer Intern",
     content: "Uber Eats - Crafted a paymentless checkout system for 1 of Australia's biggest grocery chain 🛒",

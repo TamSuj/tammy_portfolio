@@ -26,6 +26,7 @@
   import museum from "./assets/museum.jpg";
   import sunset from "./assets/sunset.jpeg";
   import darksky from "./assets/darksky.jpeg";
+  import AboutMe from "@/components/ui/about-me";
 
   export default function Home() {
     const pageRef = useRef<HTMLDivElement>(null);
@@ -115,7 +116,7 @@
               
               <div className="flex flex-wrap items-center justify-center gap-4">
                 <span className="text-neutral-500">based in</span>
-                <span className="font-semibold">LA</span>
+                <span className="font-semibold">SF Bay Area</span>
                 <span className="inline-flex items-center justify-center h-[60px] w-[80px] rounded-[999px] overflow-hidden bg-neutral-900 sm:h-[70px] w-[100px]">
                   <Image
                     src="https://images.unsplash.com/photo-1729536233990-5dd65ab81e42?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -283,10 +284,18 @@
         <section className="w-full max-w-5xl pb-12 relative z-10">
           <AnimatedCardStack />
         </section>
+        
+        {/* About me Section */}
+        <h1 className="text-neutral-900 text-center text-4xl font-bold tracking-tight sm:text-5xl pt-16 relative z-10">
+          About Me
+        </h1>
+        <section className="w-full max-w-5xl pb-12 relative z-10">
+          <AboutMe /> 
+        </section>
 
         {/* Hobbies Section */}
         <h1 className="text-neutral-900 text-center text-4xl font-bold tracking-tight sm:text-5xl pt-16 relative z-10">
-          Hobbies
+          Photography
         </h1>
         <section className="w-full relative z-10">
           <ZoomParallax
